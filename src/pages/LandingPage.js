@@ -23,6 +23,8 @@
 // }
 
 // export default LandingPage
+
+
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { db } from "../utils/firebase"; // Import Firestore instance

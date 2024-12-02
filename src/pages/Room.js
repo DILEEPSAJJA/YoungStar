@@ -17,7 +17,7 @@ const Room = () => {
   const [userMap, setUserMap] = useState({}); // Map senderId to username
   const [error, setError] = useState(''); // To hold error message
   const location = useLocation();
-  const { friend, roomId } = location.state;
+  const { friend, roomId } = location.state; // Extracted roomId from location.state
 
   // Fetch usernames for sender IDs
   useEffect(() => {
@@ -39,9 +39,8 @@ const Room = () => {
 
   // Fetch messages for the room
   useEffect(() => {
-    const roomId = window.location.pathname.split('/room/')[1]; // Extract roomId from URL
     const q = query(
-      collection(db, 'rooms', roomId, 'messages'),
+      collection(db, 'rooms', roomId, 'messages'), // Use destructured roomId
       orderBy('timestamp', 'asc')
     );
 
@@ -54,14 +53,14 @@ const Room = () => {
     });
 
     return () => unsubscribe();
-  }, []);
+  }, [roomId]); // Add roomId as a dependency
 
   // Send a message
   const sendMessage = async () => {
     if (newMessage.trim()) {
       try {
-        const roomId = window.location.pathname.split('/room/')[1];
         await addDoc(collection(db, 'rooms', roomId, 'messages'), {
+          // Use destructured roomId
           text: newMessage,
           senderId: auth.currentUser?.uid,
           timestamp: serverTimestamp(),

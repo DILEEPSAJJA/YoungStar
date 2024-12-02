@@ -1,0 +1,185 @@
+/* .register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form {
+  width: 100%;
+  top: 0px;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-span {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-span input,
+.input-span select,
+.input-span textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #070707;
+}
+
+.input-span textarea {
+  resize: none; 
+  height: 80px; 
+}
+
+.input-span select {
+  appearance: none; 
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path fill="gray" d="M7 10l5 5 5-5z"/></svg>')
+    no-repeat right 8px center;
+  background-size: 8px 8px;
+  overflow-y: hidden; /* Hides the scrollbar
+}
+
+.input-span select option {
+  color: #dedcdc; /* Makes options visible 
+  padding: 5px; /* Adds spacing for readability 
+  background: #0d0d0d; /* Ensures a clean background 
+}
+
+.input-span select::-webkit-scrollbar {
+  display: none; /* Hides scrollbar for Chrome, Safari, and Edge 
+}
+
+.input-span select {
+  scrollbar-width: none; /* Hides scrollbar for Firefox 
+}
+
+.submit {
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: #45a049;
+} */
+
+
+.register-container {
+  top: 30px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.form {
+  margin-top: 10px;
+  width: 100%;
+  top: 100px;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-span {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-span input,
+.input-span select,
+.input-span textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  box-sizing: border-box;
+  background-color: #070707;
+  color: #dedcdc;
+}
+
+.input-span textarea {
+  resize: none; /* Prevent resizing */
+  height: 40px; /* Adjust height for better readability */
+}
+
+/* Hobbies (Interests List) Styling */
+.input-span select {
+  appearance: none; /* Removes native dropdown arrow styling */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path fill="gray" d="M7 10l5 5 5-5z"/></svg>') 
+    no-repeat right 8px center;
+  background-size: 8px 8px;
+  overflow-y: auto; /* Enables vertical scrolling */
+  max-height: 150px; /* Set a max height for better control */
+}
+
+.input-span select option {
+  color: #dedcdc; /* Makes options visible */
+  padding: 5px; /* Adds spacing for readability */
+  background: #0d0d0d; /* Ensures a clean background */
+}
+
+/* Scrollbar Styling */
+.input-span select::-webkit-scrollbar {
+  width: 5px; /* Adjust scrollbar width */
+}
+
+.input-span select::-webkit-scrollbar-thumb {
+  background-color: #555; /* Scrollbar thumb color */
+  border-radius: 4px;
+}
+
+.input-span select::-webkit-scrollbar-thumb:hover {
+  background-color: #777; /* Thumb hover effect */
+}
+
+.input-span select::-webkit-scrollbar-track {
+  background: transparent; /* Track background */
+}
+
+.submit {
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: #45a049;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
